@@ -1,4 +1,11 @@
 #!/bin/bash
+
+# the testsuite script runs program on each test in the test suite (as specified by suite-file) 
+# and reports on any tests whose output does not match the expected output
+# invoked as:  ./testsuite suite-file program
+# for example suite-file contains: test1 test2 test3
+# the first one (test1) will use the file test1.in to hold its input, an optional file test1.args to store command line args
+# and test1.out to store its expected output.
 if [ $# -ne 2 ]; then
   echo "incorrect number of command line arguments" >&2
   exit 1
